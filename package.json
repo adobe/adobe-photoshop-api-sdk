@@ -1,0 +1,32 @@
+{
+  "name": "adobe-photoshop-api-sdk",
+  "version": "0.0.1",
+  "description": "Adobe Photoshop API SDK",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adobe/adobe-photoshop-api-sdk.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adobe/adobe-photoshop-api-sdk/issues"
+  },
+  "homepage": "https://github.com/adobe/adobe-photoshop-api-sdk#readme",
+  "dependencies": {
+    "@adobe/aio-lib-photoshop-api": "^0.0.4-beta.6",
+    "@adobe/jwt-auth": "^1.0.1",
+    "@aws-sdk/client-cognito-identity": "^3.235.0",
+    "@aws-sdk/client-s3": "^3.235.0",
+    "@aws-sdk/credential-provider-cognito-identity": "^3.235.0",
+    "aws-sdk": "^2.1313.0"
+  },
+  "devDependencies": {
+    "path-browserify": "^1.0.1",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
+  }
+}
