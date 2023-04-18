@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Copyright 2022 Adobe
+# Copyright 2023 Adobe
 # All Rights Reserved.
 
 # NOTICE: Adobe permits you to use, modify, and distribute this file in
