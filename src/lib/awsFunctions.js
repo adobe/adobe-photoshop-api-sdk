@@ -1,3 +1,12 @@
+/*
+Copyright 2023 Adobe
+All Rights Reserved.
+
+NOTICE: Adobe permits you to use, modify, and distribute this file in
+accordance with the terms of the Adobe license agreement accompanying
+it.
+*/
+
 const { awsConfig } = require('../../config/config')
 
 // https://docs.aws.amazon.com/AmazonS3/latest/userguide/example_s3_ListObjects_section.html
