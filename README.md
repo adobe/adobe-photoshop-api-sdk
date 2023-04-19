@@ -1,24 +1,39 @@
 # Adobe Photoshop API SDK
 
-## Preparation
+## To Get Started
 
-#### Create Photoshop API credential
+You’ll need to have: 
 
-1. [Sign up](https://developer.adobe.com/photoshop/api/signup/?ref=signup) to create a credential in order to use Photoshop API. When creating a credential, a zip file (_config.zip_) will be automatically downloaded. It contains your private key (_private.key_). Please store the private key securely, since Adobe does not retain a copy of it.
+1. Access to Photoshop API. If you don't already have credentials you can create them by signing up [here](https://developer.adobe.com/photoshop/api/signup/?ref=signup).
+   1. Enter your project name and click on “Create credentials” and keep an eye out for the   Config.zip that will automatically download
+   ![](docs/configzip.jpg)
+1. Access to AWS
+   1. If you don't already have an AWS account you can create one [here](https://docs.aws.amazon.com/rekognition/latest/dg/setting-up.html).
 
-#### Prepare Storage
+#### Install AWS CLI and Prepare Storage
 
-AWS
+1. If you do not have an AWS access key already you will need to create one by going to [AWS IAM console](https://us-east-1.console.aws.amazon.com/iamv2/home?region=us-west-2#/users).
 
-1. [Create AWS accont](https://docs.aws.amazon.com/rekognition/latest/dg/setting-up.html)
+1. Click on your user name an you should then you should see this screen.
+1. Click on security credentials
+1. CLick on create access key
+1. Choose Command Line interface and click next 
+1. Click on Create access Key and download the .csv file and store it in a secure location
+1. Copy and paste Secret access key to clipboard
 1. Set up AWS CLI
-   1. Install [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
-   1. Configure [AWS CLI options](https://docs.aws.amazon.com/cli/latest/reference/configure/index.html): `aws configure`
-   1. Test AWS CLI: `aws s3 ls` to list S3 objects
+   1. Install AWS CLI for your operating system
+   1. Configure AWS CLI by running the following command  aws configure if you already have an aws profile you would need to run aws configure [--profile profile-name]
+   1. You will need to answer these questions below so make sure you you have your Access Key and Secret Access Key handy
+      1. Add your access key 
+      1. Secret access key 
+      1. Default region (choose a region closest to you for faster processing) 
+      1. Default output format: NONE
+      1. For more information please refer to https://docs.aws.amazon.com/cli/latest/reference/configure/index
+   1. Test AWS CLI: aws s3 ls to list S3 objects
 
 #### Download this project
 
-1. Clone this project: `git clone https://github.com/adobe/adobe-photoshop-api-sdk.git`
+1. Clone this project: `git clone https://github.com/adobe/adobe-photoshop-api-sdk`
 1. Install node modules: `npm install`
 1. Unzip your downloaded _config.zip_ and save `private.key` as `config/private.key` in this project
 1. Save `config/config-template.js` as `config/config.js`
