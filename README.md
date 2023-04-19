@@ -14,7 +14,7 @@ You’ll need to have:
 
 1. If you do not have an AWS access key already you will need to create one by going to [AWS IAM console](https://us-east-1.console.aws.amazon.com/iamv2/home?region=us-west-2#/users).
 
-1. Click on your user name an you should then you should see this screen.
+1. Click on your user name and then you should see this screen.
 1. Click on security credentials
 1. CLick on create access key
 1. Choose Command Line interface and click next 
