@@ -7,7 +7,7 @@ accordance with the terms of the Adobe license agreement accompanying
 it.
 */
 
-const awsFunctions = require('../../lib/awsFunctions')
+const awsLib = require('../../lib/awsLib')
 const sdk = require('../../../config/config')
 
 main()
@@ -17,7 +17,7 @@ async function main() {
     const client = await sdk.initSDK()
 
     const output = {
-      href: await awsFunctions.getSignedUrl('putObject', 'output/test09.psd'),
+      href: await awsLib.getSignedUrl('putObject', 'output/test09.psd'),
       storage: sdk.psApiLib.Storage.EXTERNAL,
       type: sdk.psApiLib.MimeType.PSD
     }
@@ -62,7 +62,7 @@ async function main() {
         },
         {
           input: {
-            // href: await awsFunctions.getSignedUrl('getObject', 'input/input03.jpg'), //ex: AWS S3 (s3://<awsConfig.bucketName>/input/input01.jpg)
+            // href: await awsLib.getSignedUrl('getObject', 'input/input03.jpg'), //ex: AWS S3 (s3://<awsConfig.bucketName>/input/input01.jpg)
             href: 'https://raw.githubusercontent.com/kmikawa/testfiles/main/input/input03.jpg',
             storage: sdk.psApiLib.Storage.EXTERNAL,
           },
@@ -74,7 +74,7 @@ async function main() {
 
     const job = await client.createDocument(output, options)
     console.log(`Response: ${JSON.stringify(job,null,2)}\n`)
-    console.log(`Output File: ${await awsFunctions.getSignedUrl('getObject', 'output/test09.psd')}\n`)
+    console.log(`Output File: ${await awsLib.getSignedUrl('getObject', 'output/test09.psd')}\n`)
 
   } catch (e) {
     console.error(e)

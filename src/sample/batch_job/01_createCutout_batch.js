@@ -8,7 +8,7 @@ it.
 */
 
 const { awsConfig } = require('../../../config/config')
-const awsFunctions = require('../../lib/awsFunctions')
+const awsLib = require('../../lib/awsLib')
 const sdk = require('../../../config/config')
 const path = require('path');
 const fs = require('fs')
@@ -32,13 +32,13 @@ main()
 
 async function main() {
   client = await sdk.initSDK()
-  const inputs = await awsFunctions.listObjects(listObjectsInputRequest)
+  const inputs = await awsLib.listObjects(listObjectsInputRequest)
   console.log(`${inputs.Contents.length} input files`)
   
   inputs.Contents.forEach( async content => {
     console.debug(` content: ${content.Key}`)
-    const inputSingedUrl = await awsFunctions.getSignedUrl('getObject', content.Key)
-    const outputSingedUrl = await awsFunctions.getSignedUrl('putObject', `${path.parse(content.Key).dir}/${outputDir}/${path.parse(content.Key).name}.png`)
+    const inputSingedUrl = await awsLib.getSignedUrl('getObject', content.Key)
+    const outputSingedUrl = await awsLib.getSignedUrl('putObject', `${path.parse(content.Key).dir}/${outputDir}/${path.parse(content.Key).name}.png`)
     createCutout(inputSingedUrl, outputSingedUrl, content)
   })
 }

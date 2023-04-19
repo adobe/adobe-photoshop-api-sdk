@@ -7,7 +7,7 @@ accordance with the terms of the Adobe license agreement accompanying
 it.
 */
 
-const awsFunctions = require('../../lib/awsFunctions')
+const awsLib = require('../../lib/awsLib')
 const sdk = require('../../../config/config')
 
 main()
@@ -17,13 +17,13 @@ async function main() {
     const client = await sdk.initSDK()
 
     const input = {
-      // href: await awsFunctions.getSignedUrl('getObject', 'input/input03.jpg'), //ex: AWS S3 (s3://<awsConfig.bucketName>/input/input03.jpg)
+      // href: await awsLib.getSignedUrl('getObject', 'input/input03.jpg'), //ex: AWS S3 (s3://<awsConfig.bucketName>/input/input03.jpg)
       href: 'https://raw.githubusercontent.com/kmikawa/testfiles/main/input/input03.jpg',
       storage: sdk.psApiLib.Storage.EXTERNAL,
     }
 
     const output = {
-      href: await awsFunctions.getSignedUrl('putObject', 'output/test06.png'),
+      href: await awsLib.getSignedUrl('putObject', 'output/test06.png'),
       storage: sdk.psApiLib.Storage.EXTERNAL,
       type: sdk.psApiLib.MimeType.PNG
     }
@@ -32,7 +32,7 @@ async function main() {
 
     const job = await client.applyPresetXmp(input, output, options)
     console.log(`Response: ${JSON.stringify(job,null,2)}\n`)
-    console.log(`Output File: ${await awsFunctions.getSignedUrl('getObject', 'output/test06.png')}\n`)
+    console.log(`Output File: ${await awsLib.getSignedUrl('getObject', 'output/test06.png')}\n`)
 
   } catch (e) {
     console.error(e)
