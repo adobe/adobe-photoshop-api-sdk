@@ -7,7 +7,7 @@ accordance with the terms of the Adobe license agreement accompanying
 it.
 */
 
-const awsFunctions = require('../../lib/awsFunctions')
+const awsLib = require('../../lib/awsLib')
 const sdk = require('../../../config/config')
 
 main()
@@ -17,7 +17,7 @@ async function main() {
     const client = await sdk.initSDK()
 
     const input = {
-      // href: await awsFunctions.getSignedUrl('getObject', 'input/input02.psd'), //ex: AWS S3 (s3://<awsConfig.bucketName>/input/input02.psd)
+      // href: await awsLib.getSignedUrl('getObject', 'input/input02.psd'), //ex: AWS S3 (s3://<awsConfig.bucketName>/input/input02.psd)
       href: 'https://raw.githubusercontent.com/kmikawa/testfiles/main/input/input02.psd',
       storage: sdk.psApiLib.Storage.EXTERNAL,
     }
@@ -27,7 +27,7 @@ async function main() {
         {
           name: "so1",
           input: {
-            // href: await awsFunctions.getSignedUrl('getObject', 'input/input02.jpg'), //ex: AWS S3 (s3://<awsConfig.bucketName>/input/input02.jpg)
+            // href: await awsLib.getSignedUrl('getObject', 'input/input02.jpg'), //ex: AWS S3 (s3://<awsConfig.bucketName>/input/input02.jpg)
       href: 'https://raw.githubusercontent.com/kmikawa/testfiles/main/input/input02.jpg',
             storage: sdk.psApiLib.Storage.EXTERNAL
           }
@@ -36,14 +36,14 @@ async function main() {
     }
 
     const output = {
-      href: await awsFunctions.getSignedUrl('putObject', 'output/test10.png'),
+      href: await awsLib.getSignedUrl('putObject', 'output/test10.png'),
       storage: sdk.psApiLib.Storage.EXTERNAL,
       type: sdk.psApiLib.MimeType.PNG
     }
 
     const job = await client.replaceSmartObject(input, output, options)
     console.log(`Response: ${JSON.stringify(job,null,2)}\n`)
-    console.log(`Output File: ${await awsFunctions.getSignedUrl('getObject', 'output/test10.png')}\n`)
+    console.log(`Output File: ${await awsLib.getSignedUrl('getObject', 'output/test10.png')}\n`)
 
   } catch (e) {
     console.error(e)
