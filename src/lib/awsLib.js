@@ -8,6 +8,7 @@ it.
 */
 
 const { awsConfig } = require('../../config/config')
+require('aws-sdk/lib/maintenance_mode_message').suppress = true;
 
 // https://docs.aws.amazon.com/AmazonS3/latest/userguide/example_s3_ListObjects_section.html
 async function listObjects(listObjectsInputRequest) {
