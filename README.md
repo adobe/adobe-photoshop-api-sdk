@@ -21,7 +21,7 @@ You’ll need to have:
 1. Select "Command Line Interface" and click "Next" ![](docs/CLI_next.png) 
 1. Enter a name for your access key and click on “Create access key” ![](docs/set_description.png) 
 1. Copy and paste the “Secret access key” and store it in a safe place. You will need it in the next step.
-   1. _We recommend downloading the .csv file and storing it in a safe location as the Secret will not be accessible after you leave the screen_ 
+  _We recommend downloading the .csv file and storing it in a safe location as the Secret will not be accessible after you leave the screen_ 
 
 1. Set up AWS CLI
    1. Install [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) 
