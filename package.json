@@ -17,8 +17,8 @@
   },
   "homepage": "https://github.com/adobe/adobe-photoshop-api-sdk#readme",
   "dependencies": {
-    "@adobe/aio-lib-photoshop-api": ">0.0.4-beta.6",
-    "@adobe/jwt-auth": "^1.0.1",
+    "@adobe/aio-lib-photoshop-api": "^1.0.0",
+    "@adobe/jwt-auth": "^2.0.0",
     "@aws-sdk/client-cognito-identity": "^3.235.0",
     "@aws-sdk/client-s3": "^3.235.0",
     "@aws-sdk/credential-provider-cognito-identity": "^3.235.0",
