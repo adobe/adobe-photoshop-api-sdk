@@ -37,12 +37,12 @@ You’ll need to have:
 #### Download this project
 
 1. Open your terminal
-1. Run `git clone https://github.com/adobe/adobe-photoshop-api-sdk]` to download the SDK.
+1. Run `git clone https://github.com/adobe/adobe-photoshop-api-sdk` to download the SDK.
 1. Change directory into `adobe-photoshop-api-sdk`
 1. Run `npm install` to install node modules
 1. Unzip the  _config.zip_ file that downloaded at the start and save `private.key` as `config/private.key` in this project
 1. Open `config/config-template.js` and fill in the information. 
-   1. _Everything you need to fill out the template can be found in your [console] (https://developer.adobe.com/console/projects)
+   1. _Everything you need to fill out the template can be found in your [console](https://developer.adobe.com/console/projects)
 1. Save `config/config-template.js` as `config/config.js` ![](images/adobe_console.jpg) 
 
 ```
