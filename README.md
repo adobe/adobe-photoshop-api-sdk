@@ -24,7 +24,7 @@ You’ll need to have:
    1. _We recommend downloading the .csv file and storing it in a safe location as the Secret will not be accessible after you leave the screen_ 
 
 1. Set up AWS CLI
-   1. Install [AWS CLI] (https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) 
+   1. Install [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) 
    1. Configure AWS CLI by running the following command `aws configure`
    1. If you already have an aws profile you would need to run `aws configure [--profile profile-name]`
    1. You will need to enter the following information
