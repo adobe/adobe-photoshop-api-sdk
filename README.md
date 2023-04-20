@@ -12,7 +12,7 @@ You’ll need to have:
    1. Once your account is created create an S3 bucket by going [here](https://s3.console.aws.amazon.com/s3/buckets).
    1. Click on “Create bucket” and name your bucket. 
 
-#### Install AWS CLI and Prepare Storage
+#### Create AWS access key
 
 1. If you do not have an AWS access key already you will need to create one by going to [AWS IAM console](https://us-east-1.console.aws.amazon.com/iamv2/home?region=us-west-2#/users).
 1. Click on your user name. ![](docs/aws_users.png)
@@ -23,16 +23,17 @@ You’ll need to have:
 1. Copy and paste the “Secret access key” and store it in a safe place. You will need it in the next step.
   _We recommend downloading the .csv file and storing it in a safe location as the Secret will not be accessible after you leave the screen_ 
 
-1. Set up AWS CLI
-  1. Install [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) 
-  1. Configure AWS CLI by running the following command `aws configure`
-  1. If you already have an aws profile you would need to run `aws configure [--profile profile-name]`  
-  1. You will need to enter the following information
-  1. Add your AWS access key 
-  1. AWS Secret access key 
-  1. Default region (choose a region closest to you for faster processing) 
-  1. Default output format: NONE
-  1. Test AWS CLI: Run the follwing command `aws s3 ls` to verify everything is configured correctly. The command should return a list of your available buckets. 
+### Set up AWS CLI
+
+ 1. Install [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) 
+ 1. Configure AWS CLI by running the following command `aws configure`
+ 1. If you already have an aws profile you would need to run `aws configure [--profile profile-name]`  
+ 1. You will need to enter the following information
+ 1. Add your AWS access key 
+ 1. AWS Secret access key 
+ 1. Default region (choose a region closest to you for faster processing) 
+ 1. Default output format: NONE
+ 1. Test AWS CLI: Run the follwing command `aws s3 ls` to verify everything is configured correctly. The command should return a list of your available buckets. 
 
 #### Download this project
 
