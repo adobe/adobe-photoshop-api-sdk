@@ -23,7 +23,7 @@ You’ll need to have:
 1. Copy and paste the “Secret access key” and store it in a safe place. You will need it in the next step.
   _We recommend downloading the .csv file and storing it in a safe location as the Secret will not be accessible after you leave the screen_ 
 
-### Set up AWS CLI
+#### Set up AWS CLI
 
  1. Install [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) 
  1. Configure AWS CLI by running the following command `aws configure`
