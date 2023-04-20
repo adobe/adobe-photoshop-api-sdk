@@ -6,7 +6,7 @@ You’ll need to have:
 
 1. Access to Photoshop API credentials. If you don't already have any you can create them by signing up [here](https://developer.adobe.com/photoshop/api/signup/?ref=signup).
    1. Enter your project name and click on “Create credentials” and keep an eye out for the `config.zip` that will automatically download.
-   ![](images/configzip.jpg)
+   ![](docs/configzip.jpg)
 1. Access to AWS
    1. If you don't already have an AWS account you can create one [here](https://docs.aws.amazon.com/rekognition/latest/dg/setting-up.html).
    1. Once your account is created create an S3 bucket by going [here](https://s3.console.aws.amazon.com/s3/buckets).
@@ -15,11 +15,11 @@ You’ll need to have:
 #### Install AWS CLI and Prepare Storage
 
 1. If you do not have an AWS access key already you will need to create one by going to [AWS IAM console](https://us-east-1.console.aws.amazon.com/iamv2/home?region=us-west-2#/users).
-1. Click on your user name. ![](images/aws_users.jpg)
-1. Click on "Security credentials" ![](images/security_credentials.jpg)
-1. Scroll down the page and click on "Create access key" ![](images/create_access_key.jpg)
-1. Select "Command Line Interface" and click "Next" ![](images/CLI_next.jpg) 
-1. Enter a name for your access key and click on “Create access key” ![](images/set_description.jpg) 
+1. Click on your user name. ![](docs/aws_users.jpg)
+1. Click on "Security credentials" ![](docs/security_credentials.jpg)
+1. Scroll down the page and click on "Create access key" ![](docs/create_access_key.jpg)
+1. Select "Command Line Interface" and click "Next" ![](docs/CLI_next.jpg) 
+1. Enter a name for your access key and click on “Create access key” ![](docs/set_description.jpg) 
 1. Copy and paste the “Secret access key” and store it in a safe place. You will need it in the next step.
    1. _We recommend downloading the .csv file and storing it in a safe location as the Secret will not be accessible after you leave the screen_ 
 
@@ -43,7 +43,7 @@ You’ll need to have:
 1. Unzip the  _config.zip_ file that downloaded at the start and save `private.key` as `config/private.key` in this project
 1. Open `config/config-template.js` and fill in the information. 
    1. _Everything you need to fill out the template can be found in your [console](https://developer.adobe.com/console/projects)
-1. Save `config/config-template.js` as `config/config.js` ![](images/adobe_console.jpg) 
+1. Save `config/config-template.js` as `config/config.js` ![](docs/adobe_console.jpg) 
 
 ```
 // Adobe Photoshop API Configuration
