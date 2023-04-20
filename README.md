@@ -33,7 +33,7 @@ You’ll need to have:
  1. AWS Secret access key 
  1. Default region (choose a region closest to you for faster processing) 
  1. Default output format: NONE
- 1. Test AWS CLI: Run the follwing command `aws s3 ls` to verify everything is configured correctly. The command should return a list of your available buckets. 
+ 1. Test AWS CLI: Run the following command `aws s3 ls` to verify everything is configured correctly. The command should return a list of your available buckets. 
 
 #### Download this project
 
