@@ -15,11 +15,11 @@ You’ll need to have:
 #### Install AWS CLI and Prepare Storage
 
 1. If you do not have an AWS access key already you will need to create one by going to [AWS IAM console](https://us-east-1.console.aws.amazon.com/iamv2/home?region=us-west-2#/users).
-1. Click on your user name. ![](docs/aws_users.jpg)
-1. Click on "Security credentials" ![](docs/security_credentials.jpg)
-1. Scroll down the page and click on "Create access key" ![](docs/create_access_key.jpg)
-1. Select "Command Line Interface" and click "Next" ![](docs/CLI_next.jpg) 
-1. Enter a name for your access key and click on “Create access key” ![](docs/set_description.jpg) 
+1. Click on your user name. ![](docs/aws_users.png)
+1. Click on "Security credentials" ![](docs/security_credentials.png)
+1. Scroll down the page and click on "Create access key" ![](docs/create_access_key.png)
+1. Select "Command Line Interface" and click "Next" ![](docs/CLI_next.png) 
+1. Enter a name for your access key and click on “Create access key” ![](docs/set_description.png) 
 1. Copy and paste the “Secret access key” and store it in a safe place. You will need it in the next step.
    1. _We recommend downloading the .csv file and storing it in a safe location as the Secret will not be accessible after you leave the screen_ 
 
@@ -43,7 +43,7 @@ You’ll need to have:
 1. Unzip the  _config.zip_ file that downloaded at the start and save `private.key` as `config/private.key` in this project
 1. Open `config/config-template.js` and fill in the information. 
    1. _Everything you need to fill out the template can be found in your [console](https://developer.adobe.com/console/projects)
-1. Save `config/config-template.js` as `config/config.js` ![](docs/adobe_console.jpg) 
+1. Save `config/config-template.js` as `config/config.js` ![](docs/adobe_console.png) 
 
 ```
 // Adobe Photoshop API Configuration
