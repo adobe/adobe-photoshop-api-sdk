@@ -26,7 +26,7 @@ You’ll need to have:
 #### Set up AWS CLI
 
  1. Install [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) 
- 1. Configure AWS CLI by running the following command `aws configure`
+ 1. Configure AWS CLI by running the following command in your terminal `aws configure`
  1. If you already have an aws profile you would need to run `aws configure [--profile profile-name]`  
  1. You will need to enter the following information
  1. Add your AWS access key 
