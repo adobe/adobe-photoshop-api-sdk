@@ -1,4 +1,4 @@
-# Adobe Photoshop API SDK
+# Adobe Photoshop API SDK Beta
 
 ## To Get Started
 
