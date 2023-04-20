@@ -9,7 +9,7 @@ You’ll need to have:
    ![](images/configzip.jpg)
 1. Access to AWS
    1. If you don't already have an AWS account you can create one [here](https://docs.aws.amazon.com/rekognition/latest/dg/setting-up.html).
-   1. Once your account is created create an S3 bucket by going [here] (https://s3.console.aws.amazon.com/s3/buckets).
+   1. Once your account is created create an S3 bucket by going [here](https://s3.console.aws.amazon.com/s3/buckets).
    1. Click on “Create bucket” and name your bucket. 
 
 #### Install AWS CLI and Prepare Storage
