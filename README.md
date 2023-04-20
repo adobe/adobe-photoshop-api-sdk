@@ -24,15 +24,15 @@ You’ll need to have:
   _We recommend downloading the .csv file and storing it in a safe location as the Secret will not be accessible after you leave the screen_ 
 
 1. Set up AWS CLI
-   1. Install [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) 
-   1. Configure AWS CLI by running the following command `aws configure`
-   1. If you already have an aws profile you would need to run `aws configure [--profile profile-name]`
-   1. You will need to enter the following information
-      1. Add your AWS access key 
-      1. AWS Secret access key 
-      1. Default region (choose a region closest to you for faster processing) 
-      1. Default output format: NONE
-   1. Test AWS CLI: Run the follwing command `aws s3 ls` to verify everything is configured correctly. The command should return a list of your available buckets. 
+  1. Install [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) 
+  1. Configure AWS CLI by running the following command `aws configure`
+  1. If you already have an aws profile you would need to run `aws configure [--profile profile-name]`  
+  1. You will need to enter the following information
+  1. Add your AWS access key 
+  1. AWS Secret access key 
+  1. Default region (choose a region closest to you for faster processing) 
+  1. Default output format: NONE
+  1. Test AWS CLI: Run the follwing command `aws s3 ls` to verify everything is configured correctly. The command should return a list of your available buckets. 
 
 #### Download this project
 
