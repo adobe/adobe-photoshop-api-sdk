@@ -110,7 +110,7 @@ node src/sample/batch_job/01_createCutout_batch.js
 ## Links
 
 - [Photoshop API documentation](https://developer.adobe.com/photoshop/photoshop-api-docs/api/)
-- [Demo](https://developer.adobe.com/photoshop/api/)
+- [Demo](https://developer.adobe.com/photoshop/api/demo/)
 - [Curl command examples](https://developer.adobe.com/photoshop/photoshop-api-docs/code-sample/)
 - [Create a credential](https://developer.adobe.com/photoshop/api/signup/?ref=signup)
 - [Supported Features](https://developer.adobe.com/photoshop/photoshop-api-docs/features/)
