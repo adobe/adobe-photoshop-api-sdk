@@ -18,13 +18,13 @@ async function main() {
 
     const input = {
       // href: await awsLib.getSignedUrl('getObject', 'input/input03.jpg'), //ex: AWS S3 (s3://<awsConfig.bucketName>/input/input03.jpg)
-      href: 'https://raw.githubusercontent.com/adobe/adobe-photoshop-api-sdk/testfiles/main/input/input03.jpg',
+      href: 'https://raw.githubusercontent.com/adobe/adobe-photoshop-api-sdk/main/testfiles/input/input03.jpg',
       storage: sdk.psApiLib.Storage.EXTERNAL,
     }
 
     const preset = {
       // href: await awsLib.getSignedUrl('getObject', 'input/Auto-BW.xmp'), //ex: AWS S3 (s3://<awsConfig.bucketName>/input/Auto-BW.xmp)
-      href: 'https://raw.githubusercontent.com/adobe/adobe-photoshop-api-sdk/testfiles/main/input/vignette_b.xmp',
+      href: 'https://raw.githubusercontent.com/adobe/adobe-photoshop-api-sdk/main/testfiles/input/vignette_b.xmp',
       storage: sdk.psApiLib.Storage.EXTERNAL
     }
 

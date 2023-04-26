@@ -18,7 +18,7 @@ async function main() {
 
     const input = {
       // href: await awsLib.getSignedUrl('getObject', 'input/input01.jpg'), //ex: AWS S3 (s3://<awsConfig.bucketName>/input/input01.jpg)
-      href: 'https://raw.githubusercontent.com/adobe/adobe-photoshop-api-sdk/testfiles/main/input/input01.jpg',
+      href: 'https://raw.githubusercontent.com/adobe/adobe-photoshop-api-sdk/main/testfiles/input/input01.jpg',
       storage: sdk.psApiLib.Storage.EXTERNAL,
     }
 
@@ -32,7 +32,7 @@ async function main() {
       actions: [
         {
           // href: await awsLib.getSignedUrl('getObject', 'input/fisheye.atn'), //ex: AWS S3 (s3://<awsConfig.bucketName>/input/fisheye.atn)
-          href: 'https://raw.githubusercontent.com/adobe/adobe-photoshop-api-sdk/input/fisheye.atn',
+          href: 'https://raw.githubusercontent.com/adobe/adobe-photoshop-api-sdk/main/testfiles/input/fisheye.atn',
           storage: sdk.psApiLib.Storage.EXTERNAL,
         }
       ]
