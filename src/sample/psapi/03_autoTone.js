@@ -18,7 +18,7 @@ async function main() {
 
     const input = {
       // href: await awsLib.getSignedUrl('getObject', 'input/input01.png'), //ex: AWS S3 (s3://<awsConfig.bucketName>/input/input01.png)
-      href: 'https://raw.githubusercontent.com/kmikawa/testfiles/main/input/input01.png',
+      href: 'https://raw.githubusercontent.com/adobe/adobe-photoshop-api-sdk/testfiles/main/input/input01.png',
       storage: sdk.psApiLib.Storage.EXTERNAL,
     }
 
