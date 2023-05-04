@@ -1,6 +1,6 @@
 {
   "name": "@adobe/adobe-photoshop-api-sdk",
-  "version": "0.0.1",
+  "version": "0.0.0-development",
   "description": "Adobe Photoshop API SDK",
   "main": "index.js",
   "scripts": {
@@ -26,10 +26,9 @@
     "aws-sdk": "^2.1313.0"
   },
   "devDependencies": {
-    "@semantic-release/git": "^10.0.1",
     "path-browserify": "^1.0.1",
-    "semantic-release": "^21.0.2",
     "webpack": "^5.75.0",
-    "webpack-cli": "^5.0.1"
+    "webpack-cli": "^5.0.1",
+    "semantic-release": "^21.0.2"
   }
 }
