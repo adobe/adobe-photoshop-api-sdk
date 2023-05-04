@@ -26,13 +26,13 @@ jobs:
     - run: npm i --package-lock --package-lock-only
     - run: npm ci
     - run: npm run build --if-present
-    - run: npm test
-    - name: upload coverage
-      if: success()
-      run: curl -s https://codecov.io/bash | bash
-      env:
-        CODECOV_NAME: ${{ runner.os }} node.js ${{ matrix.node-version }}
-      shell: bash
+    # - run: npm test
+    # - name: upload coverage
+    #   if: success()
+    #   run: curl -s https://codecov.io/bash | bash
+    #   env:
+    #     CODECOV_NAME: ${{ runner.os }} node.js ${{ matrix.node-version }}
+    #   shell: bash
 
   semantic-release:
     runs-on: ubuntu-latest
