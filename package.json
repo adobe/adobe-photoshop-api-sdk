@@ -18,6 +18,9 @@
     "url": "https://github.com/adobe/adobe-photoshop-api-sdk/issues"
   },
   "homepage": "https://github.com/adobe/adobe-photoshop-api-sdk#readme",
+  "engines": {
+    "node": ">=14.0.0"
+  },
   "dependencies": {
     "@adobe/aio-lib-photoshop-api": "^1.0.0",
     "@adobe/jwt-auth": "^2.0.0",
