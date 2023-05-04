@@ -1,0 +1,52 @@
+# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+
+name: Node.js CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        node-version: [10.x, 12.x, 14.x]
+        os: [ubuntu-latest, windows-latest]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - run: npm i --package-lock --package-lock-only
+    - run: npm ci
+    - run: npm run build --if-present
+    - run: npm test
+    - name: upload coverage
+      if: success()
+      run: curl -s https://codecov.io/bash | bash
+      env:
+        CODECOV_NAME: ${{ runner.os }} node.js ${{ matrix.node-version }}
+      shell: bash
+
+  semantic-release:
+    runs-on: ubuntu-latest
+    if: ${{  !contains(github.event.head_commit.message, '[ci skip]') && github.ref == 'refs/heads/master' }}
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+      - name: Use Node.js 14.18
+        uses: actions/setup-node@v1
+        with:
+          node-version: '14.18'
+      - run: npm install
+      - run: npm run semantic-release
+        env:
+          GITHUB_TOKEN: ${{ secrets.ADOBE_BOT_GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.ADOBE_BOT_NPM_TOKEN }}
