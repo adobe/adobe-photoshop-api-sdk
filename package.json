@@ -11,6 +11,7 @@
     "type": "git",
     "url": "https://github.com/adobe/adobe-photoshop-api-sdk.git"
   },
+  "release": { "branches": [ "main" ] },
   "author": "",
   "license": "MIT",
   "bugs": {
