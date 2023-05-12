@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="./s3-bundle.js"></script>
+</head>
+<body>
+<h1>Adobe DI SDK Remove Background</h1>
+<div id="viewer" />
+<script>
+    window.addEventListener("load", (event) => {
+        const script = document.createElement("script");
+        script.src = '';
+        script.async = true;
+        script.onload = () => window.rbsInit();
+        document.body.appendChild(script);
+        listAlbums();
+    });
+</script>
+</body>
+</html>

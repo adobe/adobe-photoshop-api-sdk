@@ -42,9 +42,10 @@ You’ll need to have:
 1. Change directory into `adobe-photoshop-api-sdk`
 1. Run `npm install` to install node modules
 1. Unzip the  _config.zip_ file that downloaded at the start and save `private.key` as `config/private.key` in this project
-1. Open `config/config-template.js` and fill in the information. 
-   1. _Everything you need to fill out the template can be found in your [console](https://developer.adobe.com/console/projects)
-1. Save `config/config-template.js` as `config/config.js` ![](docs/adobe_console.png) 
+1. Open `config/adobe-template.js`, fill in the information, and save `config/adobe.js`
+   1. Everything you need to fill out the template can be found in your [console](https://developer.adobe.com/console/projects)
+1. Open `config/aws-template.js`, fill in the information, and save `config/aws.js`
+   1. See README to find where to get those information.
 
 ```
 // Adobe Photoshop API Configuration
