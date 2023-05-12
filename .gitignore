@@ -1,9 +1,11 @@
+.DS_Store
 .temp
 node_modules/
-public/
-src/component/
-.DS_Store
+public/s3-bundle.js
+config/adobe.js
+config/aws.js
 config/config.js
 config/private.key
 package-lock.json
-webpack.config.js
+server.crt
+server.key
