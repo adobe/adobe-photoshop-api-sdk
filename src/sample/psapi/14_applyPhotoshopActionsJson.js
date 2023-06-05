@@ -29,12 +29,12 @@ async function main() {
   
     const options = {
       actionJSON: [
-        {"_obj":"traceContour","edge":{"_enum":"contourEdge","_value":"upper"},"level":148},
-        {"_obj":"placeEvent","freeTransformCenterState":{"_enum":"quadCenterState","_value":"QCSAverage"},"height":{"_unit":"percentUnit","_value":51.83142658062201},"null":{"_kind":"local","_path":"ACTION_JSON_OPTIONS_ADDITIONAL_IMAGES_0"},"offset":{"_obj":"offset","horizontal":{"_unit":"pixelsUnit","_value":298.34811239846806},"vertical":{"_unit":"pixelsUnit","_value":127.16503382715794}},"replaceLayer":{"_obj":"placeEvent","to":{"_id":5,"_ref":"layer"}},"width":{"_unit":"percentUnit","_value":51.83142658062201}}
+        {'_obj':'traceContour','edge':{'_enum':'contourEdge','_value':'upper'},'level':148},
+        {'_obj':'placeEvent','freeTransformCenterState':{'_enum':'quadCenterState','_value':'QCSAverage'},'height':{'_unit':'percentUnit','_value':51.83142658062201},'null':{'_kind':'local','_path':'ACTION_JSON_OPTIONS_ADDITIONAL_IMAGES_0'},'offset':{'_obj':'offset','horizontal':{'_unit':'pixelsUnit','_value':298.34811239846806},'vertical':{'_unit':'pixelsUnit','_value':127.16503382715794}},'replaceLayer':{'_obj':'placeEvent','to':{'_id':5,'_ref':'layer'}},'width':{'_unit':'percentUnit','_value':51.83142658062201}}
       ],
       additionalImages: [
         {
-          href: 'https://raw.githubusercontent.com/adobe/adobe-photoshop-api-sdk/main/testfiles/input/input01.jpg',
+          href: 'https://raw.githubusercontent.com/adobe/adobe-photoshop-api-sdk/main/testfiles/input/input02.jpg',
           storage: 'adobe'
         }
       ]
