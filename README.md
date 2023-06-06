@@ -116,5 +116,3 @@ node src/sample/batch_job/01_createCutout_batch.js
 - [Create a credential](https://developer.adobe.com/photoshop/api/signup/?ref=signup)
 - [Supported Features](https://developer.adobe.com/photoshop/photoshop-api-docs/features/)
 - [Submit a ticket for support or feedback](https://psd-services.zendesk.com/hc/en-us/requests/new)
-
-
