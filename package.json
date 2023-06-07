@@ -65,7 +65,10 @@
       ]
     ]
   },
-  "author": "",
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": "Adobe Inc.",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/adobe/adobe-photoshop-api-sdk/issues"
