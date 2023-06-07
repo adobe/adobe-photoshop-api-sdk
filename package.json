@@ -1,6 +1,6 @@
 {
   "name": "@adobe/adobe-photoshop-api-sdk",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Adobe Photoshop API SDK",
   "main": "index.js",
   "scripts": {
@@ -16,38 +16,54 @@
       "main"
     ],
     "plugins": [
-      ["@semantic-release/commit-analyzer", {
-        "preset": "eslint",
-        "releaseRules": [
+      [
+        "@semantic-release/commit-analyzer",
         {
-          "subject": "*",
-          "release": false
-        },
-        {
-          "subject": "FEATURE-RELEASE:*",
-          "release": "minor"
-        },
-        {
-          "subject": "BUGFIX-RELEASE:*",
-          "release": "patch"
-        },
-        {
-          "subject": "BREAKING-RELEASE:*",
-          "release": "major"
+          "preset": "eslint",
+          "releaseRules": [
+            {
+              "subject": "*",
+              "release": false
+            },
+            {
+              "subject": "FEATURE-RELEASE:*",
+              "release": "minor"
+            },
+            {
+              "subject": "BUGFIX-RELEASE:*",
+              "release": "patch"
+            },
+            {
+              "subject": "BREAKING-RELEASE:*",
+              "release": "major"
+            }
+          ]
         }
-        ]
-      }],
-      ["@semantic-release/release-notes-generator", {
-        "preset": "eslint"
-      }],
-      ["@semantic-release/npm"],
-      ["@semantic-release/git", {
-        "preset": "eslint",
-        "assets": ["package.json", "package-lock.json"],
-        "message": " [ci skip] no-release: version number update"
-      }],
-      ["@semantic-release/github"]
-    ]  
+      ],
+      [
+        "@semantic-release/release-notes-generator",
+        {
+          "preset": "eslint"
+        }
+      ],
+      [
+        "@semantic-release/npm"
+      ],
+      [
+        "@semantic-release/git",
+        {
+          "preset": "eslint",
+          "assets": [
+            "package.json",
+            "package-lock.json"
+          ],
+          "message": " [ci skip] no-release: version number update"
+        }
+      ],
+      [
+        "@semantic-release/github"
+      ]
+    ]
   },
   "author": "",
   "license": "MIT",
