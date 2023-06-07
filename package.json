@@ -1,6 +1,6 @@
 {
   "name": "@adobe/adobe-photoshop-api-sdk",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Adobe Photoshop API SDK",
   "main": "index.js",
   "scripts": {
