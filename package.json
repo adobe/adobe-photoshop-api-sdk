@@ -70,6 +70,7 @@
   "devDependencies": {
     "@babel/preset-env": "^7.21.5",
     "@semantic-release/git": "^9.0.1",
+    "conventional-changelog-eslint": "^3.0.9",
     "babel-loader": "^9.1.2",
     "path-browserify": "^1.0.1",
     "semantic-release": "^17.4.7",
