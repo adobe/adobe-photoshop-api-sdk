@@ -33,65 +33,20 @@ async function main() {
       - place the additional image in a new layer (note the placeholder ACTION_JSON_OPTIONS_ADDITIONAL_IMAGES_0 for path field) and resize
       - rename the newly created layer
     */
+   const actionJSON = [
+      {"_obj":"canvasSize","height":{"_unit":"pixelsUnit","_value":3000.0},"horizontal":{"_enum":"horizontalLocation","_value":"center"},"vertical":{"_enum":"verticalLocation","_value":"center"},"width":{"_unit":"pixelsUnit","_value":3000.0}},
+      {"_obj":"copyEvent"},
+      {"_obj":"move","_target":[{"_enum":"ordinal","_ref":"layer"}],"to":{"_obj":"offset","horizontal":{"_unit":"pixelsUnit","_value":0.0},"vertical":{"_unit":"pixelsUnit","_value":0.0}}},
+      {"_obj":"set","_target":[{"_property":"selection","_ref":"channel"}],"to":{"_enum":"ordinal","_value":"allEnum"}},
+      {"_obj":"cut","_target":[{"_property":"selection","_ref":"channel"}],"to":{"_obj":"offset","horizontal":{"_unit":"pixelsUnit","_value":0.0},"vertical":{"_unit":"pixelsUnit","_value":0.0}}},
+      {"_obj":"inverse"},
+      {"_obj":"syntheticFill","_target":[{"_enum":"ordinal","_ref":"document"}],"mode":{"_enum":"syntheticFillMode","_value":"inpaint"},"prompt":"fill the background","serviceID":"clio","serviceOptionsList":{"clio":{"_obj":"clio","gi_CONTENT_PRESERVE":0,"gi_CROP":false,"gi_DILATE":false,"gi_ENABLE_PROMPT_FILTER":true,"gi_GUIDANCE":6,"gi_MODE":"tinp","gi_NUM_STEPS":-1,"gi_PROMPT":"fill the background","gi_SEED":-1,"gi_SIMILARITY":0}}}
+    ]
+    
+
+
     const options = {
-      actionJSON: [
-        {
-          '_obj': 'traceContour',
-          'edge': {
-            '_enum': 'contourEdge',
-            '_value': 'upper'
-          },
-          'level': 148
-        },
-        {
-          '_obj': 'placeEvent',
-          'freeTransformCenterState': {
-            '_enum': 'quadCenterState',
-            '_value': 'QCSAverage'
-          },
-          'height': {
-            '_unit': 'percentUnit',
-            '_value': 51.83142658062201
-          },
-          'null': {
-            '_kind': 'local',
-            '_path': 'ACTION_JSON_OPTIONS_ADDITIONAL_IMAGES_0'
-          },
-          'offset': {
-            '_obj': 'offset',
-            'horizontal': {
-              '_unit': 'pixelsUnit',
-              '_value': 298.34811239846806
-            },
-            'vertical': {
-              '_unit': 'pixelsUnit',
-              '_value': 127.16503382715794
-            }
-          },
-          'replaceLayer': {
-            '_obj': 'placeEvent',
-            'to': {
-              '_id': 5,
-              '_ref': 'layer'
-            }
-          },
-          'width': {
-            '_unit': 'percentUnit',
-            '_value': 51.83142658062201
-          }
-        },
-        {
-          '_obj': 'set',
-          '_target': [{
-            '_enum': 'ordinal',
-            '_ref': 'layer'
-          }],
-          'to': {
-            '_obj': 'layer',
-            'name': 'Overlay'
-          }
-        }
-      ],
+      actionJSON: actionJSON,
       additionalImages: [
         {
           href: 'https://raw.githubusercontent.com/adobe/adobe-photoshop-api-sdk/main/testfiles/input/input02.jpg',
