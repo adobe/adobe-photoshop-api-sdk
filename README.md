@@ -29,11 +29,11 @@ my-project
 You need to configure your Photoshop API credentials
 
 1. Open `config/adobe-template.js`, save as `config/adobe.js`, and fill in the information.
-   1. Everything you need to fill out in `config/adobe.js` can be found in your [console](https://developer-stage.adobe.com/console/projects). If you have not created your credential yet, go to [Create Photoshop API credentials](#Create-Photoshop-API-credentials)
+   1. Everything you need to fill out in `config/adobe.js` can be found in your [console](https://developer.adobe.com/console/projects). If you have not created your credential yet, go to [Create Photoshop API credentials](#Create-Photoshop-API-credentials)
 
       ```
       // Adobe Photoshop API Configuration
-      // https://developer-stage.adobe.com/console/projects -> project -> Service Account (JWT)
+      // https://developer.adobe.com/console/projects -> project -> Service Account (JWT)
       const adobeConfig = {
       clientId: "",
       clientSecret: "",
@@ -52,10 +52,10 @@ node src/sample/psapi/00_helloWorld.js
 You will see API response that says, `Welcome to the Photoshop API!`
 ## Create Photoshop API credentials
 
-1. If you have not created credentials to access Photoshop API yet, you can create them by signing up [here](https://developer-stage.adobe.com/photoshop/api/signup/?ref=signup).
+1. If you have not created credentials to access Photoshop API yet, you can create them by signing up [here](https://developer.adobe.com/photoshop/api/signup/?ref=signup).
    1. Enter your project name and click on `Create credentials`.
    ![](docs/create_project.jpg)
-1. At the end of creating credential wizard, you will find your Client ID. Go to [console](https://developer-stage.adobe.com/console/projects) in order to get more credential details.
+1. At the end of creating credential wizard, you will find your Client ID. Go to [console](https://developer.adobe.com/console/projects) in order to get more credential details.
    ![](docs/credential_credinfo.jpg)
 
 ## Input/Output Storage Options
