@@ -1,13 +1,68 @@
 # Adobe Photoshop API SDK Beta
 
-## To Get Started
+## Set up Photoshop API automation project by running one command
 
-You’ll need to have: 
+### Quick Start
 
-1. Access to Photoshop API credentials. If you don't already have any you can create them by signing up [here](https://developer.adobe.com/photoshop/api/signup/?ref=signup).
-   1. Enter your project name and click on “Create credentials” and keep an eye out for the `config.zip` that will automatically download.
-   ![](docs/configzip.jpg)
-1. Access to AWS
+```
+npx create-adobe-photoshop-api-sdk my-project
+cd my-project
+```
+Running these commands will create a directory called my-project inside the current folder. Inside that directory, it will generate the initial project structure and install the dependencies:
+```
+my-project
+├── README.md
+├── node_modules
+├── package.json
+├── .gitignore
+├── config (your credential information goes here)
+│   ├── adobe-template.js
+│   ├── aws-template.js
+│   └── config.js
+└── src
+    ├── sample
+    │   ├── batch_script (This directory contains Photoshop API sample scripts for batch jobs)
+    │   └── psapi (This directory contains Photoshop API sample scripts for a single job)
+    └── testfiles (This directory contains test files that are used in sample scripts)
+```
+### Set your configuration
+You need to configure your Photoshop API credentials
+
+1. Open `config/adobe-template.js`, save as `config/adobe.js`, and fill in the information.
+   1. Everything you need to fill out in `config/adobe.js` can be found in your [console](https://developer-stage.adobe.com/console/projects). If you have not created your credential yet, go to [Create Photoshop API credentials](#Create-Photoshop-API-credentials)
+
+      ```
+      // Adobe Photoshop API Configuration
+      // https://developer-stage.adobe.com/console/projects -> project -> Service Account (JWT)
+      const adobeConfig = {
+      clientId: "",
+      clientSecret: "",
+      orgId: ""
+      };
+      ```
+
+      ![](docs/console.jpg)
+
+### Run the very first Photoshop 'Hello World' API using this SDK
+
+```
+node src/sample/psapi/00_helloWorld.js
+```
+
+You will see API response that says, `Welcome to the Photoshop API!`
+## Create Photoshop API credentials
+
+1. If you have not created credentials to access Photoshop API yet, you can create them by signing up [here](https://developer-stage.adobe.com/photoshop/api/signup/?ref=signup).
+   1. Enter your project name and click on `Create credentials`.
+   ![](docs/create_project.jpg)
+1. At the end of creating credential wizard, you will find your Client ID. Go to [console](https://developer-stage.adobe.com/console/projects) in order to get more credential details.
+   ![](docs/credential_credinfo.jpg)
+
+## Input/Output Storage Options
+
+We support external services such as AWS S3, Azure, Dropbox, Google Drive.  The below is how you can set up the external storage using AWS S3.
+
+### Access to AWS
    1. If you don't already have an AWS account you can create one [here](https://docs.aws.amazon.com/rekognition/latest/dg/setting-up.html).
    1. Once your account is created create an S3 bucket by going [here](https://s3.console.aws.amazon.com/s3/buckets).
    1. Click on “Create bucket” and name your bucket. 
@@ -35,29 +90,6 @@ You’ll need to have:
  1. Default output format: NONE
  1. Test AWS CLI: Run the following command `aws s3 ls` to verify everything is configured correctly. The command should return a list of your available buckets. 
 
-#### Download this project
-
-1. Open your terminal
-1. Run `git clone https://github.com/adobe/adobe-photoshop-api-sdk` to download the SDK.
-1. Change directory into `adobe-photoshop-api-sdk`
-1. Run `npm install` to install node modules
-1. Unzip the  _config.zip_ file that downloaded at the start and save `private.key` as `config/private.key` in this project
-1. Open `config/adobe-template.js`, fill in the information, and save `config/adobe.js`
-   1. Everything you need to fill out the template can be found in your [console](https://developer.adobe.com/console/projects)
-1. Open `config/aws-template.js`, fill in the information, and save `config/aws.js`
-   1. See README to find where to get those information.
-
-```
-// Adobe Photoshop API Configuration
-// https://developer.adobe.com/console/projects -> project -> Service Account (JWT)
-const adobeConfig = {
-  clientId: "",
-  clientSecret: "",
-  technicalAccountId: "",
-  orgId: "",
-  metaScopes: ["ent_ccas_sdk"],
-};
-```
 
 ```
 // AWS Configuration
@@ -68,11 +100,11 @@ const awsConfig = {
 }
 ```
 
-## Sample Script
+## Run Sample Script
 
-#### Run a sample script (src/sample/psapi/...)
+### Run a sample script (src/sample/psapi/...)
 
-1. Run a sample
+1. Run a sample script to remove background of the image
 
 ```
 node src/sample/psapi/01_createCutout.js
@@ -80,7 +112,7 @@ node src/sample/psapi/01_createCutout.js
 
 2. Find your output file in your S3 storage, output directory (ex: s3://<awsConfig.bucketName>/output/...)
 
-#### Run a sample scrip for a batch job (src/sample/batch_script/...)
+### Run a sample scrip for a batch job (src/sample/batch_script/...)
 
 1. Store multiple JPEG files in your S3 storage (ex: s3://<awsConfig.bucketName>/input/...) or modify input/output directories in the sample script.
 ```
@@ -98,7 +130,7 @@ const listObjectsInputRequest = { //URI Request Parameters
 };
 // -------------------------------------------------
 ```
-2. Run a sample
+2. Run a sample script to remove background of the multiple images
 
 ```
 node src/sample/batch_job/01_createCutout_batch.js
