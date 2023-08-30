@@ -33,14 +33,14 @@ You need to configure your Photoshop API credentials
 
       ```
       // Adobe Photoshop API Configuration
-      // https://developer.adobe.com/console/projects -> project -> Service Account (JWT)
+      // https://developer.adobe.com/console/projects -> project -> OAuth Server-to-Server
+
       const adobeConfig = {
-      clientId: "",
-      clientSecret: "",
-      orgId: ""
+         clientId: "",
+         clientSecret: "",
+         orgId: ""
       };
       ```
-
       ![](docs/console.jpg)
 
 ### Run the very first Photoshop 'Hello World' API using this SDK
