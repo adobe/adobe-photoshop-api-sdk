@@ -28,20 +28,20 @@ my-project
 ### Set your configuration
 You need to configure your Photoshop API credentials
 
-1. Open `config/adobe-template.js`, save as `config/adobe.js`, and fill in the information.
-   1. Everything you need to fill out in `config/adobe.js` can be found in your [console](https://developer.adobe.com/console/projects). If you have not created your credential yet, go to [Create Photoshop API credentials](#Create-Photoshop-API-credentials)
+1. Open `config/adobe-template.js` and save as `config/adobe.js`.
+1. Fill in the information in `config/adobe.js`. Everything you need to fill out can be found in your [console](https://developer.adobe.com/console/projects). If you have not created your credential yet, go to [Getting started with Photoshop API](https://developer-stage.adobe.com/photoshop/photoshop-api-docs/getting-started/#get-access).
 
-      ```
-      // Adobe Photoshop API Configuration
-      // https://developer.adobe.com/console/projects -> project -> OAuth Server-to-Server
+   ```
+   // Adobe Photoshop API Configuration
+   // https://developer.adobe.com/console/projects -> project -> OAuth Server-to-Server
 
-      const adobeConfig = {
-         clientId: "",
-         clientSecret: "",
-         orgId: ""
-      };
-      ```
-      ![](docs/console.jpg)
+   const adobeConfig = {
+      clientId: "",
+      clientSecret: "",
+      orgId: ""
+   };
+   ```
+   ![](docs/console.jpg)
 
 ### Run the very first Photoshop 'Hello World' API using this SDK
 
@@ -50,14 +50,6 @@ node src/sample/psapi/00_helloWorld.js
 ```
 
 You will see API response that says, `Welcome to the Photoshop API!`
-## Create Photoshop API credentials
-
-1. If you have not created credentials to access Photoshop API yet, you can create them by signing up [here](https://developer.adobe.com/photoshop/api/signup/?ref=signup).
-   1. Enter your project name and click on `Create credentials`.
-   ![](docs/create_project.jpg)
-1. At the end of creating credential wizard, you will find your Client ID. Go to [console](https://developer.adobe.com/console/projects) in order to get more credential details.
-   ![](docs/credential_credinfo.jpg)
-
 ## Input/Output Storage Options
 
 We support external services such as AWS S3, Azure, Dropbox, Google Drive.  The below is how you can set up the external storage using AWS S3.
@@ -142,9 +134,9 @@ node src/sample/batch_job/01_createCutout_batch.js
 
 ## Links
 
+- [Getting started with Photoshop API](https://developer-stage.adobe.com/photoshop/photoshop-api-docs/getting-started/#get-access)
 - [Photoshop API documentation](https://developer.adobe.com/photoshop/photoshop-api-docs/api/)
 - [Demo](https://developer.adobe.com/photoshop/api/demo/)
 - [Curl command examples](https://developer.adobe.com/photoshop/photoshop-api-docs/code-sample/)
-- [Create a credential](https://developer.adobe.com/photoshop/api/signup/?ref=signup)
 - [Supported Features](https://developer.adobe.com/photoshop/photoshop-api-docs/features/)
 - [Submit a ticket for support or feedback](https://psd-services.zendesk.com/hc/en-us/requests/new)
