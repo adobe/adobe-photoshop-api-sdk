@@ -2,6 +2,10 @@
 
 ## Set up Photoshop API automation project by running one command
 
+This SDK helps you to set up a new project and installs [Adobe Photoshop API Library](https://github.com/adobe/aio-lib-photoshop-api) that enables the wide range of image editing features that span Photoshop, Lightroom, and Sensei services by running one command.
+
+If you already have a project or service that needs Adobe Photoshop API Library, go to [Adobe Photoshop API Library](https://github.com/adobe/aio-lib-photoshop-api).
+
 ### Quick Start
 
 ```
