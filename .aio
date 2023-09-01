@@ -1,0 +1,12 @@
+{
+  ims: {
+    contexts: {
+      example: {
+        client_id: "adb70ef595a340a590a19e043172939a",
+        client_secret: "s8e-HVkCGbdR_3U13rDMwIaWBWHGsn6SgSiz",
+        org_id: "E6BE446963095EE70A494012@AdobeOrg",
+        scope: "AdobeID, openid"
+      }
+    }
+  }
+}

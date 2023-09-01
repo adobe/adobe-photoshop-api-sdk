@@ -4,7 +4,7 @@
 
 This SDK helps you to set up a new project and installs [Adobe Photoshop API Library](https://github.com/adobe/aio-lib-photoshop-api) that enables the wide range of image editing features that span Photoshop, Lightroom, and Sensei services by running one command.
 
-If you already have a project or service that needs Adobe Photoshop API Library, go to [Adobe Photoshop API Library](https://github.com/adobe/aio-lib-photoshop-api).
+NOTE: If  you already have a project or service that only needs [Adobe Photoshop API Library](https://github.com/adobe/aio-lib-photoshop-api), go to Adobe Photoshop API Library, and follow the install instructions from there.
 
 ### Quick Start
 
@@ -20,8 +20,8 @@ my-project
 ├── package.json
 ├── .gitignore
 ├── config (your credential information goes here)
-│   ├── adobe-template.js
-│   ├── aws-template.js
+│   ├── adobe-sample.js
+│   ├── aws-sample.js
 │   └── config.js
 └── src
     ├── sample
@@ -32,7 +32,7 @@ my-project
 ### Set your configuration
 You need to configure your Photoshop API credentials
 
-1. Open `config/adobe-template.js` and save as `config/adobe.js`.
+1. Open `config/adobe-sample.js` and save as `config/adobe.js`.
 1. Fill in the information in `config/adobe.js`. Everything you need to fill out can be found in your [console](https://developer.adobe.com/console/projects). If you have not created your credential yet, go to [Getting started with Photoshop API](https://developer-stage.adobe.com/photoshop/photoshop-api-docs/getting-started/#get-access).
 
    ```
@@ -108,7 +108,7 @@ node src/sample/psapi/01_createCutout.js
 
 2. Find your output file in your S3 storage, output directory (ex: s3://<awsConfig.bucketName>/output/...)
 
-### Run a sample scrip for a batch job (src/sample/batch_script/...)
+### Run a sample script for a batch job (src/sample/batch_script/...)
 
 1. Store multiple JPEG files in your S3 storage (ex: s3://<awsConfig.bucketName>/input/...) or modify input/output directories in the sample script.
 ```

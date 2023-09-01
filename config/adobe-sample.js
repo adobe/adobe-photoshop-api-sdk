@@ -7,14 +7,14 @@ accordance with the terms of the Adobe license agreement accompanying
 it.
 */
 // Adobe Photoshop API Configuration
-// https://developer.adobe.com/console/projects -> project -> Service Account (JWT)
+// Everything you need to fill out can be found in your console: (https://developer.adobe.com/console/projects -> project -> OAuth Server-to-Server)
+// If you have not created your credential yet, go to https://developer-stage.adobe.com/photoshop/photoshop-api-docs/getting-started/#get-access
 
 const adobeConfig = {
   clientId: '',
   clientSecret: '',
-  technicalAccountId: '',
   orgId: '',
-  metaScopes: ['ent_ccas_sdk']
+  scopes: 'openid,AdobeID'
 };
 
 module.exports = {

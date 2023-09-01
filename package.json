@@ -78,6 +78,7 @@
     "node": ">=14.0.0"
   },
   "dependencies": {
+    "@adobe/aio-lib-ims": "^6.5.0",
     "@adobe/aio-lib-photoshop-api": "^1.1.0",
     "@adobe/jwt-auth": "^2.0.0",
     "@aws-sdk/client-cognito-identity": "^3.235.0",
@@ -89,8 +90,8 @@
   "devDependencies": {
     "@babel/preset-env": "^7.21.5",
     "@semantic-release/git": "^9.0.1",
-    "conventional-changelog-eslint": "^3.0.9",
     "babel-loader": "^9.1.2",
+    "conventional-changelog-eslint": "^3.0.9",
     "path-browserify": "^1.0.1",
     "semantic-release": "^17.4.7",
     "webpack": "^5.82.1",

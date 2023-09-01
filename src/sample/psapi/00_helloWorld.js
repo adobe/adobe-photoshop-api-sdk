@@ -16,6 +16,8 @@ main()
 
 async function main() {
   try {
+    console.log('Welcome to Photoshop API!')
+    return
     const client = await sdk.initSDK()
     const job = await client.helloWord()
     console.log(`Response: ${JSON.stringify(job,null,2)}\n`)
