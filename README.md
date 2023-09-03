@@ -57,7 +57,7 @@ You need to configure your Photoshop API credentials
 node src/sample/psapi/11_getDocumentManifest.js
 ```
 
-The sample script generates JSON manifest files from [input01.psd](https://raw.githubusercontent.com/adobe/adobe-photoshop-api-sdk/main/testfiles/input/input01.psd). The JSON manifest is the tree representation of all of the layer objects contained in the PSD document.
+You will receive an API response that shows JSON manifest for [input01.psd](https://raw.githubusercontent.com/adobe/adobe-photoshop-api-sdk/main/testfiles/input/input01.psd). The JSON manifest contains the tree representation of all of the layer objects contained in the PSD document.
 
 ___Other sample scripts require output storage to be set up. Below are the setup instructions for AWS S3.___
 
