@@ -2,9 +2,12 @@
 
 ## Set up Photoshop API automation project by running one command
 
-This SDK helps you to set up a new project and installs [Adobe Photoshop API Library](https://github.com/adobe/aio-lib-photoshop-api) that enables the wide range of image editing features that span Photoshop, Lightroom, and Sensei services by running one command.
+Once you have your credentials in hand, the Adobe Photoshop API SDK can help you get started quickly by streamlining library installation, configuration and providing sample content.
 
-NOTE: If  you already have a project or service that only needs [Adobe Photoshop API Library](https://github.com/adobe/aio-lib-photoshop-api), go to Adobe Photoshop API Library, and follow the install instructions from there.
+1. ___New Projects___: With one command, the SDK will create a new Node.js project that you can build upon with all the dependencies needed to use the Photoshop API. This includes the [Adobe Photoshop API Library](https://github.com/adobe/aio-lib-photoshop-api) along with sample code and test files.
+
+1. ___Existing Projects___: If you have an existing project or service that simply requires the addition of the Adobe Photoshop API Library, go to [Adobe Photoshop API Library](https://github.com/adobe/aio-lib-photoshop-api), and follow the installation instructions.
+
 
 ### Quick Start
 
@@ -13,6 +16,7 @@ npx create-adobe-photoshop-api-sdk my-project
 cd my-project
 ```
 Running these commands will create a directory called my-project inside the current folder. Inside that directory, it will generate the initial project structure and install the dependencies:
+
 ```
 my-project
 ├── README.md
@@ -20,8 +24,8 @@ my-project
 ├── package.json
 ├── .gitignore
 ├── config (your credential information goes here)
-│   ├── adobe-sample.js
-│   ├── aws-sample.js
+│   ├── adobe-template.js
+│   ├── aws-template.js
 │   └── config.js
 └── src
     ├── sample
@@ -32,7 +36,7 @@ my-project
 ### Set your configuration
 You need to configure your Photoshop API credentials
 
-1. Open `config/adobe-sample.js` and save as `config/adobe.js`.
+1. Open `config/adobe-template.js` and save as `config/adobe.js`.
 1. Fill in the information in `config/adobe.js`. Everything you need to fill out can be found in your [console](https://developer.adobe.com/console/projects). If you have not created your credential yet, go to [Getting started with Photoshop API](https://developer-stage.adobe.com/photoshop/photoshop-api-docs/getting-started/#get-access).
 
    ```
@@ -47,16 +51,19 @@ You need to configure your Photoshop API credentials
    ```
    ![](docs/console.jpg)
 
-### Run the very first Photoshop 'Hello World' API using this SDK
+### Run /documentManifest Photoshop API using this SDK
 
 ```
-node src/sample/psapi/00_helloWorld.js
+node src/sample/psapi/11_getDocumentManifest.js
 ```
 
-You will see API response that says, `Welcome to the Photoshop API!`
-## Input/Output Storage Options
+The sample script generates JSON manifest files from [input01.psd](https://raw.githubusercontent.com/adobe/adobe-photoshop-api-sdk/main/testfiles/input/input01.psd). The JSON manifest is the tree representation of all of the layer objects contained in the PSD document.
 
-We support external services such as AWS S3, Azure, Dropbox, Google Drive.  The below is how you can set up the external storage using AWS S3.
+___Other sample scripts require output storage to be set up. Below are the setup instructions for AWS S3.___
+
+## Input and Output File Storage
+
+We support external services including AWS S3, Azure, Dropbox and Google Drive. To set up external storage using AWS S3, please follow the instructions below. More details are to follow for other [storage providers](https://developer-stage.adobe.com/photoshop/photoshop-api-docs/general-workflow/#input-and-output-file-storage).
 
 ### Access to AWS
    1. If you don't already have an AWS account you can create one [here](https://docs.aws.amazon.com/rekognition/latest/dg/setting-up.html).
@@ -65,13 +72,8 @@ We support external services such as AWS S3, Azure, Dropbox, Google Drive.  The 
 
 #### Create AWS access key
 
-1. If you do not have an AWS access key already you will need to create one by going to [AWS IAM console](https://us-east-1.console.aws.amazon.com/iamv2/home?region=us-west-2#/users).
-1. Click on your user name. ![](docs/aws_users.png)
-1. Click on "Security credentials" ![](docs/security_credentials.png)
-1. Scroll down the page and click on "Create access key" ![](docs/create_access_key.png)
-1. Select "Command Line Interface" and click "Next" ![](docs/CLI_next.png) 
-1. Enter a name for your access key and click on “Create access key” ![](docs/set_description.png) 
-1. Copy and paste the “Secret access key” and store it in a safe place. You will need it in the next step.
+If you do not have an AWS access key already you will need to create one by going to [AWS Account and Access Keys](https://docs.aws.amazon.com/powershell/latest/userguide/pstools-appendix-sign-up.html).
+Copy and paste the “Secret access key” and store it in a safe place. You will need it in the next step.
   _We recommend downloading the .csv file and storing it in a safe location as the Secret will not be accessible after you leave the screen_ 
 
 #### Set up AWS CLI
@@ -85,14 +87,17 @@ We support external services such as AWS S3, Azure, Dropbox, Google Drive.  The 
  1. Default region (choose a region closest to you for faster processing) 
  1. Default output format: NONE
  1. Test AWS CLI: Run the following command `aws s3 ls` to verify everything is configured correctly. The command should return a list of your available buckets. 
-
+ 1. Open `config/aws-template.js`, save as `config/aws.js`, and fill in the information in `config/aws.js`.
 
 ```
 // AWS Configuration
 // https://aws.amazon.com/console/
+
 const awsConfig = {
-  region: "", // us-east-1
-  bucketName: "" // aws s3 bucket name
+    accessKeyId: '',
+    secretAccessKey: '',
+    region: '',
+    bucketName: ''
 }
 ```
 

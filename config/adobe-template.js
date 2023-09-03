@@ -14,8 +14,8 @@ const adobeConfig = {
   clientId: '',
   clientSecret: '',
   orgId: '',
-  scopes: 'openid,AdobeID'
-};
+  scopes: ['openid','AdobeID']
+}
 
 module.exports = {
   adobeConfig
