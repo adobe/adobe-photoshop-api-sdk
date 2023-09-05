@@ -1,10 +1,12 @@
 .DS_Store
 .temp
+.vscode
+.aio
 node_modules/
 public/s3-bundle.js
 config/adobe.js
 config/aws.js
 config/private.key
-package-lock.json
 server.crt
 server.key
+server.js

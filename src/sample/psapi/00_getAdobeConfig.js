@@ -18,8 +18,9 @@ main()
 async function main() {
   try {
     const token = await sdk.getToken()
-    console.log(`Client Id (apiKey): ${sdk.adobeConfig.clientId}`)
-    console.log(`Token: ${token}`)
+    console.log(`Client ID (apiKey):\t${sdk.adobeConfig.clientId}`)
+    console.log('\n')
+    console.log(`Token:${token}`)
   } catch (e) {
     console.error(e)
   }
