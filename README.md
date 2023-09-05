@@ -78,15 +78,15 @@ Copy and paste the “Secret access key” and store it in a safe place. You wil
 
 #### Set up AWS CLI
 
- 1. Install [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) 
+ 1. Install [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
  1. Configure AWS CLI by running the following command in your terminal: `aws configure`
- 1. If you already have an aws profile, run `aws configure [--profile profile-name]`  
+ 1. If you already have an aws profile, run `aws configure [--profile profile-name]`
  1. You will need to enter the following information:
-      - Add your AWS access key 
-      - Add your AWS Secret access key 
-      - Choose a default region (Choose a region closest to you for faster processing.) 
+      - Add your AWS access key
+      - Add your AWS Secret access key
+      - Choose a default region (Choose a region closest to you for faster processing.)
       - Choose a default output (format: NONE)
- 1. Test AWS CLI: Run the following command `aws s3 ls` to verify everything is configured correctly. The command should return a list of your available buckets. 
+ 1. Test AWS CLI: Run the following command `aws s3 ls` to verify everything is configured correctly. The command should return a list of your available buckets.
  1. Open `config/aws-template.js`, save as `config/aws.js`, and fill in the information in `config/aws.js`.
 
 ```
