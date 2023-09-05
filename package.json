@@ -47,9 +47,6 @@
         }
       ],
       [
-        "@semantic-release/npm"
-      ],
-      [
         "@semantic-release/git",
         {
           "preset": "eslint",
