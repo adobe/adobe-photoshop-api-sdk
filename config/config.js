@@ -6,19 +6,25 @@ NOTICE: Adobe permits you to use, modify, and distribute this file in
 accordance with the terms of the Adobe license agreement accompanying
 it.
 */
-const { awsConfig } = require('./aws')
+const fs = require('fs')
+const path = require('path')
 const { adobeConfig } = require('./adobe')
-const psApiLib = require('@adobe/aio-lib-photoshop-api') // https://github.com/adobe/aio-lib-photoshop-api
-const auth = require("@adobe/jwt-auth") // https://www.npmjs.com/package/@adobe/jwt-auth
-const fs = require("fs")
 
-const { description, version } = require('../package.json');
+let awsConfig
+if (fs.existsSync(path.join(__dirname, 'aws.js'))) {
+    awsConfig = require('./aws').awsConfig // config file for AWS S3
+}
+
+const psApiLib = require('@adobe/aio-lib-photoshop-api') // https://github.com/adobe/aio-lib-photoshop-api
+const { Ims } = require('@adobe/aio-lib-ims') // https://www.npmjs.com/package/@adobe/aio-lib-ims
+
+const { description, version } = require('../package.json')
 const userAgentHeader = `${description}/${version}`
 
 async function getToken() {
-    adobeConfig.privateKey = fs.readFileSync(`${__dirname}/private.key`)
-    const token = await auth(adobeConfig)
-    return token.access_token
+  const ims = new Ims()
+  const response = await ims.getAccessTokenByClientCredentials(adobeConfig.clientId, adobeConfig.clientSecret, adobeConfig.orgId, adobeConfig.scopes)
+  return response.access_token.token
 }
 
 async function initSDK() {
@@ -29,7 +35,7 @@ async function initSDK() {
 }
 
 module.exports = {
-  awsConfig,
+  ...awsConfig ? { awsConfig } : {},
   adobeConfig,
   psApiLib,
   getToken,
