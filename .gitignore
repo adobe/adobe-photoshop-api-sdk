@@ -1,6 +1,7 @@
 .DS_Store
 .temp
 .vscode
+.aio
 node_modules/
 public/s3-bundle.js
 config/adobe.js
