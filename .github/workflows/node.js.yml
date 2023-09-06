@@ -49,4 +49,3 @@ jobs:
       - run: npm run semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.ADOBE_BOT_GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.ADOBE_BOT_NPM_TOKEN }}
