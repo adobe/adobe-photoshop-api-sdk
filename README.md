@@ -1,4 +1,4 @@
-# Adobe Photoshop API SDK Beta
+# Adobe Photoshop API SDK
 
 ## Set up a Photoshop API automation project with just one command
 
@@ -140,6 +140,29 @@ node src/sample/batch_job/01_createCutout_batch.js
 3. Find your output files in your S3 storage, output directory (ex: s3://<awsConfig.bucketName>/input/output/...)
 
 - You can also use AWS CLI to sync files from your S3 storage into your local machine (ex: `aws s3 sync s3://<awsConfig.bucketName>/input/output/ /Users/<username>/Desktop/output/`)
+
+## API Support Status in the SDK
+
+| API | Endpoint | Status | Sample | Feature Doc | API Doc |
+| ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
+| Execute Photoshop Actions  | https://image.adobe.io/pie/psdService/photoshopActions | Supported  | [13_applyPhotoshopActions.js](src/sample/psapi/13_applyPhotoshopActions.js)  | [Doc](https://www.adobe.com/go/photoshop-api-docs-actions)  | [API](https://developer.adobe.com/photoshop/photoshop-api-docs/api/#tag/Photoshop/operation/photoshopActions) |
+| Remove Background  | https://image.adobe.io/sensei/cutout | Supported  | [01_createCutout.js](src/sample/psapi/01_createCutout.js)  | [Doc](https://www.adobe.com/go/photoshop-api-docs-imagecutout)  |  [API](https://developer.adobe.com/photoshop/photoshop-api-docs/api/#tag/Photoshop/operation/cutout) |
+| Create Mask  | https://image.adobe.io/sensei/mask | Supported  | [02_createMask.js](src/sample/psapi/02_createMask.js)  | [Doc](https://developer.adobe.com/photoshop/photoshop-api-docs/features/#image-mask)  | [API](https://developer.adobe.com/photoshop/photoshop-api-docs/api/#tag/Photoshop/operation/mask) |
+| Rendering / Conversion  | https://image.adobe.io/pie/psdService/renditionCreate | Supported  | [08_createRendition.js](src/sample/psapi/08_createRendition.js)  | [Doc](https://developer.adobe.com/photoshop/photoshop-api-docs/features/)  | [API](https://developer.adobe.com/photoshop/photoshop-api-docs/api/#tag/Photoshop/operation/renditionCreate) |
+| Create PSD  | https://image.adobe.io/pie/psdService/documentCreate | Supported  | [09_createDocument.js](src/sample/psapi/09_createDocument.js)  | [Doc](https://developer.adobe.com/photoshop/photoshop-api-docs/features/#the-add-edit-and-delete-layers)  | [API](https://developer.adobe.com/photoshop/photoshop-api-docs/api/#tag/Photoshop/operation/documentCreate) |
+| Replace Smart Object  | https://image.adobe.io/pie/psdService/smartObject | Supported  | [10_replaceSmartObject.js](src/sample/psapi/10_replaceSmartObject.js)  | [Doc](https://www.adobe.com/go/photoshop-api-docs-smartobject)  | [API](https://developer.adobe.com/photoshop/photoshop-api-docs/api/#tag/Photoshop/operation/smartObject) |
+| Get PSD Info (manifest)  | https://image.adobe.io/pie/psdService/documentManifest | Supported  | [11_getDocumentManifest.js](src/sample/psapi/11_getDocumentManifest.js)  | N/A | [API](https://developer.adobe.com/photoshop/photoshop-api-docs/api/#tag/Photoshop/operation/documentManifest) |
+| Edit PSD  | https://image.adobe.io/pie/psdService/documentOperations | Supported  | [12_modifyDocument.js](src/sample/psapi/12_modifyDocument.js)  | [Doc](https://developer.adobe.com/photoshop/photoshop-api-docs/features/#the-add-edit-and-delete-layers)  | [API](https://developer.adobe.com/photoshop/photoshop-api-docs/api/#tag/Photoshop/operation/documentOperations) |
+| Autotone  | https://image.adobe.io/lrService/autoTone | Supported  | [03_autoTone.js](src/sample/psapi/03_autoTone.js)  | [Doc](https://www.adobe.com/go/photosop-api-docs-autotone)  | [API](https://developer.adobe.com/photoshop/photoshop-api-docs/api/#tag/Lightroom/operation/autoTone) |
+| Auto Straighten  | https://image.adobe.io/lrService/autoStraighten | Supported  | [04_straighten.js](src/sample/psapi/04_straighten.js)  | [Doc](https://developer.adobe.com/photoshop/photoshop-api-docs/features/#autostraighten)  | [API](https://developer.adobe.com/photoshop/photoshop-api-docs/api/#tag/Lightroom/operation/autoStraighten) |
+| Preset  | https://image.adobe.io/lrService/presets | Supported  | [05_applyPreset.js](src/sample/psapi/05_applyPreset.js)  | [Doc](https://www.adobe.com/go/photoshop-api-docs-presets)  | [API](https://developer.adobe.com/photoshop/photoshop-api-docs/api/#tag/Lightroom/operation/presets) |
+| XMP  | https://image.adobe.io/lrService/xmp | Supported  | [06_applyPresetXmp.js](src/sample/psapi/06_applyPresetXmp.js)  | [Doc](https://developer.adobe.com/photoshop/photoshop-api-docs/features/#xmp)  | [API](https://developer.adobe.com/photoshop/photoshop-api-docs/api/#tag/Lightroom/operation/xmp) |
+| Edit Photo  | https://image.adobe.io/lrService/edit | Supported  | [07_editPhoto.js](src/sample/psapi/07_editPhoto.js)  | [Doc]()  | [API]() | [API](https://developer.adobe.com/photoshop/photoshop-api-docs/api/#tag/Lightroom/operation/edit) |
+| actionJSON  | Endpoint | Coming soon | N/A | [Doc](https://developer.adobe.com/photoshop/photoshop-api-docs/features/#actionjson) | [API](https://developer.adobe.com/photoshop/photoshop-api-docs/api/#tag/Photoshop/operation/actionJSON) |
+| Product Crop  | https://image.adobe.io/pie/psdService/productCrop | Coming soon | N/A | [Doc](https://developer.adobe.com/photoshop/photoshop-api-docs/features/#productcrop) | [API](https://developer.adobe.com/photoshop/photoshop-api-docs/api/#tag/Photoshop/operation/productCrop) |
+| Depth Blur  | https://image.adobe.io/pie/psdService/depthBlur | Coming soon | N/A | [Doc](https://developer.adobe.com/photoshop/photoshop-api-docs/features/#depthblur) | [API](https://developer.adobe.com/photoshop/photoshop-api-docs/api/#tag/Photoshop/operation/depthBlur) |
+| Edit text layers  | https://image.adobe.io/pie/psdService/text | Coming soon | N/A | [Doc](https://developer.adobe.com/photoshop/photoshop-api-docs/features/#text) | [API](https://developer.adobe.com/photoshop/photoshop-api-docs/api/#tag/Photoshop/operation/text) |
+| Create an artboard  | https://image.adobe.io/pie/psdService/artboardCreate | Coming soon | N/A | [Doc](https://developer.adobe.com/photoshop/photoshop-api-docs/features/#artboards) | [API](https://developer.adobe.com/photoshop/photoshop-api-docs/api/#tag/Photoshop/operation/artboardCreate) |
 
 ## Links
 
