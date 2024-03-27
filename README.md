@@ -1,4 +1,7 @@
-# Adobe Photoshop API SDK
+# Adobe Photoshop API SDK 
+
+## Deprecation notice 3/25/24: 
+This SDK will be deprecated and will no longer be supported. We recommend you switch to the new [Firefly Services SDK](https://github.com/Firefly-Services/firefly-services-sdk-js) which provides easy integration to Photoshop, Lightroom, Firefly, & Content Tagging API. 
 
 ## Set up a Photoshop API automation project with just one command
 
