@@ -70,7 +70,7 @@ We support external services including AWS S3, Azure, Dropbox and Google Drive. 
 
 ### Access to AWS
    1. If you don't already have an AWS account you can [create one](https://docs.aws.amazon.com/rekognition/latest/dg/setting-up.html).
-   1. Once your account is created, [create an S3 bucket] (https://s3.console.aws.amazon.com/s3/buckets).
+   1. Once your account is created, [create an S3 bucket](https://s3.console.aws.amazon.com/s3/buckets).
    1. Select “Create bucket” and name your bucket.
 
 #### Create AWS access key
